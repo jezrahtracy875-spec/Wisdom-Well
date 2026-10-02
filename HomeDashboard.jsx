@@ -1,13 +1,10 @@
-import DailyAgenda from "../components/dashboard/DailyAgenda";
-import PriorityGoals from "../components/dashboard/PriorityGoals";
-import DreamVisionBoard from "../components/dashboard/DreamVisionBoard";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
 
-export default function HomeDashboard() {
-  return (
-    <div className="dashboard-grid">
-      <DailyAgenda />
-      <PriorityGoals />
-      <DreamVisionBoard />
-    </div>
-  );
-}
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
